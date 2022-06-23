@@ -4,10 +4,6 @@
 // Made by Luke
 // ***********************************************************************
 
-// TODO
-// - add single column layout
-// - add product navigation builder
-
 // CONFIG ================================================================
 
 const sendLogMessages = false;        // If enabled, log messages will be sent to the console for debug purposes
