@@ -1,5 +1,3 @@
-?hideHeader=true&darkMode=false&theme=minimal&accentColor=ce8e42&hoverColor=cc9e66&backgroundColor=b8e0de&googleFontName=Acme
-
 // ***********************************************************************
 // This script can be used to easily make common changes to a Chargify PSP
 // To get started, review and edit the values in the config section below
