@@ -1,5 +1,3 @@
-premium-plan?hideHeader=true&darkMode=false&theme=default&accentColor=1e53a9&hoverColor=134fb3&backgroundColor=9faece&googleFontName=Mingzat
-
 // ***********************************************************************
 // This script can be used to easily make common changes to a Chargify PSP
 // To get started, review and edit the values in the config section below
