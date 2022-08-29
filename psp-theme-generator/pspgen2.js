@@ -1,12 +1,10 @@
 let config = {
-    darkmode: true,
+    darkMode: true,
     layout: "default",
-    googleFont: "default",
-    colors: {
-        accent: "#ff3996",
-        hover: "",
-        background: "default"
-    },
+    googleFont: "",
+    accentColor: "#ff3657",
+    hoverColor: "#df304c",
+    backgroundColor: "",
     requireOrg: false,
     requirePhone: false,
     requireCustomFields: [],
@@ -45,4 +43,4 @@ function setAccentColors(accent, hover = accent) {
     $("<style>").prop("type", "text/css").html(css).appendTo("head");
 }
 
-setAccentColors(config.colors.accent);
+applyAccentColors(config.accentColor, config.hoverColor);
