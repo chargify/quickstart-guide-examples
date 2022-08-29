@@ -40,12 +40,75 @@ function applyAccentColors(accent, hover = accent) {
     $("<style>").prop("type", "text/css").html(css).appendTo("head");
 }
 
+function minimalLayout(textColor, backgroundColor, borderColor) {
+    return `
+    body {
+        background-color: ${backgroundColor};
+        color: ${textColor};
+        font-size: 16px;
+        padding: 0px 15px; }
+    .content, .content__main, .content__secondary {
+        background: ${backgroundColor};
+        border: 0px; }
+    .content__main {
+        border-right: 1px solid ${borderColor} !important; }
+    .content__headings {
+        border: 0px solid #000; }
+    .content__heading, .form__section-heading {
+        background: ${backgroundColor};
+        color: ${textColor};
+        border-bottom: 1px solid ${borderColor};
+        padding: 20px; }
+    .content__heading--mobile {
+        background: ${backgroundColor};
+        border: 1px solid ${borderColor}; }
+    .form__section--boxed {
+        border: 0px solid ${borderColor};
+        border-radius: 4px; }
+    .form__field--boxed {
+        border: 1px solid ${borderColor}; }
+    .form__section--boxed header {
+        background: ${backgroundColor};
+        border-bottom: 1px solid ${borderColor};
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        margin: 0;
+        padding: 10px; }
+    .form__section--billing-address .form__field-radio-group .radio > .form__fields {
+        margin: 10px 0px; }
+    .form__section--billing-address .form__field-radio-group .radio > .form__field {
+        margin: 20px 10px 0px 10px; }
+    .form__field-radio-group {
+        border: 1px solid ${borderColor}; }
+    .form__field-radio-group .radio header {
+        background: ${backgroundColor};
+        color: ${textColor}; }
+    .form__field-radio-group .radio:not(:last-child) header {
+        border-bottom: 1px solid ${borderColor}; }
+    h1, h2 {
+        font-size: 18px;
+        color: ${textColor};
+        margin: 0;
+        font-weight: 500; }
+    h3 {
+        padding-left: 0px !important; }
+    .plan__summary-total {
+        font-size: 18px;
+        color: ${textColor};
+        border-top: 1px solid ${borderColor}; }
+    `
+}
+
 function applyLayout(layout, darkMode, backgroundColor) {
     let textColor = darkMode ? '#f9f9f9' : '#000000';
     let borderColor = darkMode ? '#ffffff30' : '#00000030';
     let css = "";
     let defaultBackgroundColor = "";
     switch (layout) {
+        case 'minimal':
+            defaultBackgroundColor = darkMode ? '#363c49' : '#ffffff';
+            css = minimalLayout(textColor, backgroundColor, borderColor);
+            break;
         default:
             defaultBackgroundColor = darkMode ? "#181e23" : "#f9f9f9";
             if (backgroundColor.length == 0 ) backgroundColor = defaultBackgroundColor;
