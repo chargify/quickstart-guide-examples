@@ -36,7 +36,7 @@ function applyAccentColors(accent, hover = accent) {
     .plan__summary-total { color: ${accent}; }
     .content__heading--mobile .content__heading-section--total {
         color: #ffffff; }
-    `;
+    `.replace(/^ +/gm, '');
     $("<style>").prop("type", "text/css").html(css).appendTo("head");
 }
 
