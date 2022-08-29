@@ -36,8 +36,24 @@ function applyAccentColors(accent, hover = accent) {
     .plan__summary-total { color: ${accent}; }
     .content__heading--mobile .content__heading-section--total {
         color: #ffffff; }
-    `.replace(/^ +/gm, '');
+    `;
+    $("<style>").prop("type", "text/css").html(css).appendTo("head");
+}
+
+function applyLayout(layout, darkMode, backgroundColor) {
+    let textColor = darkMode ? '#f9f9f9' : '#000000';
+    let borderColor = darkMode ? '#ffffff30' : '#00000030';
+    let css = "";
+    switch (layout) {
+        default:
+            let defaultBackgroundColor = darkMode ? "#181e23" : "#f9f9f9";
+            if (backgroundColor.length == 0 ) backgroundColor = defaultBackgroundColor;
+            css = `body {background-color: ${backgroundColor};}`;
+            console.log(css)
+            break;
+    };
     $("<style>").prop("type", "text/css").html(css).appendTo("head");
 }
 
 applyAccentColors(config.accentColor, config.hoverColor);
+applyLayout(config.layout, config.darkMode, config.backgroundColor);
