@@ -40,6 +40,26 @@ function applyAccentColors(accent, hover = accent) {
     $("<style>").prop("type", "text/css").html(css).appendTo("head");
 }
 
+function applyLayout(layout, darkMode, backgroundColor) {
+    let textColor = darkMode ? '#f9f9f9' : '#000000';
+    let borderColor = darkMode ? '#ffffff30' : '#00000030';
+    let css = "";
+    let defaultBackgroundColor = "";
+    switch (layout) {
+        case 'minimal':
+            defaultBackgroundColor = darkMode ? '#363c49' : '#ffffff';
+            css = minimalLayout(textColor, backgroundColor, borderColor);
+            break;
+        default:
+            defaultBackgroundColor = darkMode ? "#181e23" : "#f9f9f9";
+            if (backgroundColor.length == 0) backgroundColor = defaultBackgroundColor;
+            css = defaultLayout(textColor, backgroundColor, borderColor);
+            break;
+    };
+    css = darkMode ? css.replace(/^ +/gm, '') : `body {background-color: ${backgroundColor};}`;
+    $("<style>").prop("type", "text/css").html(css).appendTo("head");
+}
+
 function minimalLayout(textColor, backgroundColor, borderColor) {
     return `
     body {
@@ -126,26 +146,6 @@ function defaultLayout(textColor, backgroundColor, borderColor) {
     .content__main {
         border-right: 1px solid ${borderColor} }
 `
-}
-
-function applyLayout(layout, darkMode, backgroundColor) {
-    let textColor = darkMode ? '#f9f9f9' : '#000000';
-    let borderColor = darkMode ? '#ffffff30' : '#00000030';
-    let css = "";
-    let defaultBackgroundColor = "";
-    switch (layout) {
-        case 'minimal':
-            defaultBackgroundColor = darkMode ? '#363c49' : '#ffffff';
-            css = minimalLayout(textColor, backgroundColor, borderColor);
-            break;
-        default:
-            defaultBackgroundColor = darkMode ? "#181e23" : "#f9f9f9";
-            if (backgroundColor.length == 0 ) backgroundColor = defaultBackgroundColor;
-            css = defaultLayout(textColor, backgroundColor, borderColor);
-            break;
-    };
-    css = darkMode ? css.replace(/^ +/gm, '') : `body {background-color: ${backgroundColor};}`;
-    $("<style>").prop("type", "text/css").html(css).appendTo("head");
 }
 
 applyAccentColors(config.accentColor, config.hoverColor);
