@@ -1,10 +1,10 @@
 let config = {
-    darkMode: true,
+    darkMode: false,
     layout: "default",
-    googleFont: "",
+    googleFont: "Oswald",
     accentColor: "#ff3657",
     hoverColor: "#df304c",
-    backgroundColor: "#ffa9b1",
+    backgroundColor: "#ffc893",
     requireOrg: false,
     requirePhone: false,
     requireCustomFields: [],
@@ -53,14 +53,15 @@ function applyLayout(layout, darkMode, backgroundColor) {
         default:
             defaultBackgroundColor = darkMode ? "#181e23" : "#f9f9f9";
             if (backgroundColor.length == 0) backgroundColor = defaultBackgroundColor;
-            css = defaultLayout(textColor, backgroundColor, borderColor);
+            css = darkMode ? defaultLayout(textColor, backgroundColor, borderColor) : `body {background-color: ${backgroundColor};}`;
             break;
     };
-    css = darkMode ? css.replace(/^ +/gm, '') : `body {background-color: ${backgroundColor};}`;
+    css = css.replace(/^ +/gm, '');
     $("<style>").prop("type", "text/css").html(css).appendTo("head");
 }
 
 function minimalLayout(textColor, backgroundColor, borderColor) {
+    console.log(`minimal function - bg ${backgroundColor}, border ${borderColor}, text ${textColor}`);
     return `
     body {
         background-color: ${backgroundColor};
@@ -148,5 +149,11 @@ function defaultLayout(textColor, backgroundColor, borderColor) {
 `
 }
 
+function applyGoogleFont(font) {
+    $('head').append(`<link href="https://fonts.googleapis.com/css?family=${font}" rel="stylesheet" type="text/css">`);
+    $('body').css('font-family', `${font}, sans-serif`);
+}
+
 applyAccentColors(config.accentColor, config.hoverColor);
 applyLayout(config.layout, config.darkMode, config.backgroundColor);
+if (config.googleFont.length) applyGoogleFont(config.googleFont);
