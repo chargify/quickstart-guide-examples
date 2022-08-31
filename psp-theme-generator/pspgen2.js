@@ -1,10 +1,9 @@
 let config = {
-    darkMode: false,
-    layout: "default",
-    googleFont: "Oswald",
+    darkMode: false, layout: "default",
+    googleFont: "Abril Fatface",
     accentColor: "#ff3657",
     hoverColor: "#df304c",
-    backgroundColor: "#ffc893",
+    backgroundColor: "#164836",
     requireOrg: false,
     requirePhone: false,
     requireCustomFields: [],
@@ -61,7 +60,6 @@ function applyLayout(layout, darkMode, backgroundColor) {
 }
 
 function minimalLayout(textColor, backgroundColor, borderColor) {
-    console.log(`minimal function - bg ${backgroundColor}, border ${borderColor}, text ${textColor}`);
     return `
     body {
         background-color: ${backgroundColor};
