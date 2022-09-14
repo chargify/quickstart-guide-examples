@@ -9,9 +9,9 @@
 const sendLogMessages = false;        // If enabled, log messages will be sent to the console for debug purposes
 
 // Theme options
-const darkMode = true;               // Toggles dark mode color adjustments.
+const darkMode = false;               // Toggles dark mode color adjustments.
 const layout = "default";             // Accepted values: "default" and "minimal". More layouts WIP.
-let accentColor = "#7175ff";                 // Primary accent color. Must be a valid hex code with leading '#'
+let accentColor = "";                 // Primary accent color. Must be a valid hex code with leading '#'
 let hoverColor = "";                  // Secondary color used when hovering/clicking buttons. Defaults to accent color.
 let backgroundColor = "";             // Override theme background color. Leave blank for default.
 const googleFontName = "";            // Must be a valid Google font family url name (fonts.google.com). Will use default if left blank
