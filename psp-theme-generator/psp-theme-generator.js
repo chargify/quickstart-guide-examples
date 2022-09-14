@@ -9,7 +9,7 @@
 const sendLogMessages = false;        // If enabled, log messages will be sent to the console for debug purposes
 
 // Theme options
-const darkMode = false;               // Toggles dark mode color adjustments.
+const darkMode = true;               // Toggles dark mode color adjustments.
 const layout = "default";             // Accepted values: "default" and "minimal". More layouts WIP.
 let accentColor = "";                 // Primary accent color. Must be a valid hex code with leading '#'
 let hoverColor = "";                  // Secondary color used when hovering/clicking buttons. Defaults to accent color.
@@ -325,7 +325,7 @@ $(function () {
                 .form__field-radio-group .radio:not(:last-child) header {\
                     border-bottom: 1px solid ${borderColor}\
                 }\
-                .form__section--credit-card {\
+                .form__section--credit-card, .form__field-custom-field {\
                     border: 1px solid ${borderColor}\
                 }\
                 .content__main {\
