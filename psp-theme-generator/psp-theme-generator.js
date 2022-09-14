@@ -284,6 +284,10 @@ $(function () {
                 color: ${textColor};\
                 border-top: 1px solid ${borderColor};\
             }\
+            .form__field-custom-field fieldset legend {
+                border-bottom: 1px solid ${borderColor};
+                color: ${textColor};
+            }
             `;
             $("<style>").prop("type", "text/css").html(minimalTheme).appendTo("head");
             break;
