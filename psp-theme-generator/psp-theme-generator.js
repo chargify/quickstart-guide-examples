@@ -10,7 +10,7 @@ const sendLogMessages = false;        // If enabled, log messages will be sent t
 
 // Theme options
 const darkMode = true;               // Toggles dark mode color adjustments.
-const layout = "minimal";             // Accepted values: "default" and "minimal". More layouts WIP.
+const layout = "default";             // Accepted values: "default" and "minimal". More layouts WIP.
 let accentColor = "#7175ff";                 // Primary accent color. Must be a valid hex code with leading '#'
 let hoverColor = "";                  // Secondary color used when hovering/clicking buttons. Defaults to accent color.
 let backgroundColor = "";             // Override theme background color. Leave blank for default.
@@ -330,7 +330,7 @@ $(function () {
                     border: 1px solid ${borderColor};\
                 }\
                 .form__field-custom-field fieldset legend {  
-                    border: 1px solid ${borderColor};
+                    border-bottom: 1px solid ${borderColor};
                     color: #f9f9f9;
                 }
                 .content__main {\
