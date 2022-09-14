@@ -10,7 +10,7 @@ const sendLogMessages = false;        // If enabled, log messages will be sent t
 
 // Theme options
 const darkMode = true;               // Toggles dark mode color adjustments.
-const layout = "default";             // Accepted values: "default" and "minimal". More layouts WIP.
+const layout = "minimal";             // Accepted values: "default" and "minimal". More layouts WIP.
 let accentColor = "#7175ff";                 // Primary accent color. Must be a valid hex code with leading '#'
 let hoverColor = "";                  // Secondary color used when hovering/clicking buttons. Defaults to accent color.
 let backgroundColor = "";             // Override theme background color. Leave blank for default.
@@ -244,9 +244,6 @@ $(function () {
                 border: 0px solid ${borderColor};\
                 border-radius: 4px;\
             }\
-            .form__field--boxed {\
-                border: 1px solid ${borderColor};\
-            }\
             .form__section--boxed header {\
                 background: ${backgroundColor};\
                 border-bottom: 1px solid ${borderColor};\
@@ -261,7 +258,7 @@ $(function () {
             .form__section--billing-address .form__field-radio-group .radio > .form__field {\
                 margin: 20px 10px 0px 10px;\
             }\
-            .form__field-radio-group {\
+            .form__field--boxed, .form__field-radio-group, .form__field-custom-field {\
                 border: 1px solid ${borderColor};\
             }\
             .form__field-radio-group .radio header {\
