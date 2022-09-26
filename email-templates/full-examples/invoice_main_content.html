@@ -1,16 +1,16 @@
-## Your invoice is ready to view
+Dear {{invoice.customer.name}},
 
-A new invoice for your {{invoice.seller.name}} account is now available.<br><br>
+A new invoice for your {{invoice.seller.name}} account is now available.
 
-### Details
-**Invoice #:** INV-{{ invoice.number }}<br>
+**Invoice Number:** {{ invoice.number }}<br>
+**Issue Date:** {{ invoice.issue_date }}<br>
 **Total:** {{ invoice.total_amount | format_currency: invoice.currency }}<br>
-**Due:** {{ invoice.due_amount | format_currency: invoice.currency }}
+**Due:** {{ invoice.due_amount | format_currency: invoice.currency }}<br><br>
 
-<div style="justify-content: left;display: flex;margin:20px 0px;">
-  <a href="{{invoice.url}}" style="color:#ffffff;background-color:#2ea664;text-decoration:none;text-align:center;border-radius:5px;padding:12px;font-weight:400;">View invoice</a>
-</div><br>
+<div style="justify-content: left;display: flex;margin:20px 0px;"> <a href="{{invoice.url}}" style="color:#ffffff;background-color:#17a2b8;text-decoration:none;text-align:center;border-radius:5px;padding:12px;font-weight:400;">View your invoice online</a></div>
 
-For more details, see the attached invoice document.<br>
+<p style="font-size:12px;">If you are not able to click the above web address, please copy and paste this link into your web browser: {{invoice.url}}</p>
 
-Questions? Just respond to this email, write us at support@mycompany.com, or call us at 800-555-5555.
+Thank you,
+
+{{invoice.seller.name}}
