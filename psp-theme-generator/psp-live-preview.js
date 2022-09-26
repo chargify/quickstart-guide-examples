@@ -1,5 +1,7 @@
+//This file makes your PSPs compatible with the PSP designer. Use it to design.
+//When you're done, simply delete this file from your PSP settings, and, if needed, replace with your real JS code.
 //1. COPY/PASTE IN YOUR PSP SETTINGS
-//2. ONLY USE WHEN PREVIEWING IN TEST MODE, NEVER USE IN PRODUCTION
+//2. ONLY USE psp-live-preview.js in TEST MODE, NEVER USE IN PRODUCTION. 
 
 $(".content__alert--warning").hide();
 
