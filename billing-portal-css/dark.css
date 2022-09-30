@@ -1,0 +1,74 @@
+/* 
+OUTER BODY
+*/
+body {
+  background-color: #000000;
+}
+
+/* 
+FONT
+*/
+div {
+  font-family: "Arial" !important;
+  background-color: black !important;
+  color: white !important;
+}
+dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td, header, a, label, small {
+  font-family: "Arial" !important;
+  background-color: black !important;
+  border: 0px !important;
+  color: white !important;
+}
+
+/* 
+TOP HEADER (MASTHEAD)
+*/
+
+/* Logo */
+#logo {
+  min-height: 0;
+}
+/* Hide the my account image in the top right corner */
+#account-avatar-btn {
+  display:none;
+}
+#main-nav {
+  padding: 0px;
+}
+
+/* 
+MAIN SUBSCRIPTIONS SECTION
+*/
+
+
+/* 
+BUTTONS 
+*/
+
+/* Change call to action button colors */
+#subscription-change-offer-btn, #subscription-change-plan-btn, #cancel-link, #billings-update-btn, #shipping-address-edit-btn {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border-color: transparent;
+}
+/* save and submit buttons */
+.button--utility, .button-submit {
+    background: #ffffff !important;
+    border-color: transparent;
+    color: #000000 !important;
+}
+/* All other buttons */
+.button {
+  background: #ffffff !important;
+  border-color: transparent;
+  color: #000000 !important;
+}
+
+/* 
+OTHER 
+*/
+
+/* Invoices page, legend at the bottom that shows invoice type */
+.invoice-legend {
+  display: none;
+}
