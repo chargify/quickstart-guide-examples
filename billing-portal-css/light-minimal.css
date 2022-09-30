@@ -1,0 +1,95 @@
+/* 
+OUTER BODY
+*/
+body {
+  background-color: #ffffff;
+}
+
+/* 
+FONT
+*/
+div {
+  font-family: "Monaco" !important;
+  background-color: white !important;
+  color: black !important;
+}
+dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td, header {
+  font-family: "Monaco" !important;
+  background-color: white !important;
+  border: 0px !important;
+  color: black !important;
+}
+
+/* 
+TOP HEADER (MASTHEAD)
+*/
+
+/* Hide masthead */
+#masthead {
+  padding: 8px;
+  font-size: 12px;
+}
+/* Logo */
+#logo {
+  min-height: 0;
+}
+/* Hide the my account image in the top right corner */
+#account-avatar-btn {
+  display:none;
+}
+#main-nav {
+  padding: 0px;
+}
+#main-nav > ul > li.active, #main-nav > ul > li.inactive {
+  margin-left: 0;
+  font-size: 14px;
+}
+
+/* 
+MAIN SUBSCRIPTIONS SECTION
+*/
+
+/* Make main subscription section full width */
+/* Remove sidebar content */
+.main {
+  width: 100% !important;
+}
+/* The left hand sidebar */
+.sidebar {
+  display:none;
+}
+#main {
+  padding: 12px 36px !important;
+}
+
+/* 
+BUTTONS 
+*/
+
+/* Change call to action button colors */
+#subscription-change-offer-btn, #subscription-change-plan-btn, #cancel-link, #billings-update-btn, #shipping-address-edit-btn {
+  background: #000000 !important;
+  color: #fff;
+  border-color: transparent;
+}
+/* save and submit buttons */
+.button--utility, .button-submit {
+    background: #000000 !important;
+    border-color: transparent;
+    color: #fff;
+}
+/* All other buttons */
+.button {
+  background: #000000 !important;
+  border-color: transparent;
+  color: #fff;
+}
+
+/* 
+OTHER 
+*/
+
+/* Invoices page, legend at the bottom that shows invoice type */
+.invoice-legend {
+  display: none;
+}
