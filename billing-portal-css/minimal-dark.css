@@ -67,7 +67,9 @@ BUTTONS
 */
 
 /* Change call to action button colors */
-#subscription-change-offer-btn, #subscription-change-plan-btn, #cancel-link, #billings-update-btn, #shipping-address-edit-btn {
+#subscription-change-offer-btn, #subscription-change-plan-btn, #cancel-link, 
+#billings-update-btn, #shipping-address-edit-btn, #subscription-configure-btn, 
+#hold-link, #subscription-apply-coupon-btn, #resume-link {
   background: #ffffff !important;
   color: #000000 !important;
   border-color: transparent;
